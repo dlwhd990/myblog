@@ -1,27 +1,57 @@
-.banner {
+.top_banner {
   width: 100%;
-  height: 600px;
-  background-color: rgba(0, 0, 0, 0.7);
-  margin-top: 60px;
+  height: 60vh;
+  background-image: linear-gradient(
+    to top right,
+    var(--color-blue),
+    var(--color-purple)
+  );
 }
 
-.banner_textbox {
-  height: 85%;
-  padding: 0 8%;
+.top_banner_content {
+  height: 100%;
+  padding-top: 20vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
 }
 
-.subtitle {
-  font-size: var(--font-size-normal);
-  font-weight: 500;
-  color: var(--color-theme);
-  margin-bottom: 1rem;
+.heading {
+  font-size: var(--font-size-little-title);
+  color: white;
+  padding: 1rem 5rem 0 0;
 }
 
-.title {
-  font-size: var(--font-size-little-title);
-  font-weight: 900;
+.sub_heading {
+  font-size: var(--font-size-normal);
+  font-weight: 400;
   color: white;
+  margin: 2rem 0.2rem 2rem 0;
+}
+
+.start_now_button {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1.6rem;
+  font-size: var(--font-size-normal);
+  font-weight: 700;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 80ms all ease-in;
+}
+
+.start_now_button:hover {
+  transform: scale(1.05);
+}
+
+.blog_window {
+  width: 23rem;
+  height: calc(23rem / 9 * 16);
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border: 4px solid rgb(240, 238, 238);
 }
