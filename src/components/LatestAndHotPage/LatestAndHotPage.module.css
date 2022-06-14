@@ -1,0 +1,13 @@
+.body {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-blue),
+    var(--color-pink)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
