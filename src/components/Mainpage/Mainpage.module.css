@@ -1,6 +1,6 @@
 .top_banner {
   width: 100%;
-  height: 60vh;
+  height: 62vh;
   background-image: linear-gradient(
     to top right,
     var(--color-blue),
@@ -18,23 +18,23 @@
 }
 
 .heading {
-  font-size: var(--font-size-little-title);
+  font-size: var(--font-size-title);
   color: white;
-  padding: 1rem 5rem 0 0;
+  padding: 4rem 5rem 0 0;
 }
 
 .sub_heading {
-  font-size: var(--font-size-normal);
+  font-size: var(--font-size-bit-big);
   font-weight: 400;
   color: white;
-  margin: 2rem 0.2rem 2rem 0;
+  margin: 1.4rem 0.2rem 2.2rem 0;
 }
 
 .start_now_button {
   outline: none;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0.8rem 1.6rem;
-  font-size: var(--font-size-normal);
+  font-size: var(--font-size-bit-big);
   font-weight: 700;
   border: none;
   color: white;
@@ -45,6 +45,8 @@
 
 .start_now_button:hover {
   transform: scale(1.05);
+  background-color: var(--color-green);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .blog_window {
