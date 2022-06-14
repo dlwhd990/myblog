@@ -9,7 +9,7 @@ import Mainpage from "./components/Mainpage/Mainpage";
 const App = (props) => {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/test" element={<ArticleList />} />
         <Route path="/" element={<Mainpage />} />
