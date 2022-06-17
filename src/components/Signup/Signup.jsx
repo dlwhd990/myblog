@@ -14,7 +14,7 @@ const Signup = (props) => {
         </div>
         <div className={styles.right}>
           <h1 className={styles.title}>회원가입</h1>
-          <h2 className={styles.subtitle}>Sign up</h2>
+          <h2 className={styles.subtitle}>종로그 무료 회원이 되어보세요</h2>
           <form action="/api/" className={styles.signup_form}>
             <p>
               <label for="email">이메일</label>
@@ -56,6 +56,8 @@ const Signup = (props) => {
                 id="nickname"
                 name="nickname"
                 placeholder="닉네임 (2 ~ 6자)"
+                minLength={2}
+                maxLength={6}
               />
             </p>
             <button className={styles.submit_button}>가입</button>
