@@ -12,8 +12,8 @@
 }
 
 .main {
-  width: 1200px;
-  height: 660px;
+  width: 120rem;
+  height: 66rem;
   margin-top: 6rem;
   background-color: white;
   border-radius: 32px;
@@ -62,7 +62,7 @@
 }
 
 .signup_form input {
-  height: 44px;
+  height: 4.4rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   font-size: var(--font-size-normal);
@@ -77,7 +77,7 @@
 
 .submit_button {
   width: 100%;
-  height: 50px;
+  height: 5rem;
   outline: none;
   border: none;
   background-color: var(--color-blue);
