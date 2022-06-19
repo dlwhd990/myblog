@@ -4,6 +4,7 @@ import "./App.css";
 import ArticleView from "./components/ArticleView/ArticleView";
 import Header from "./components/Header/Header";
 import LatestAndHotPage from "./components/LatestAndHotPage/LatestAndHotPage";
+import Login from "./components/Login/Login";
 import Mainpage from "./components/Mainpage/Mainpage";
 import Signup from "./components/Signup/Signup";
 
@@ -16,6 +17,7 @@ const App = (props) => {
         <Route path="/lnh" element={<LatestAndHotPage />} />
         <Route path="/article" element={<ArticleView />}></Route>
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
