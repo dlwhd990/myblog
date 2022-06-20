@@ -1,5 +1,4 @@
 .body {
-  width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(
     to right bottom,
@@ -12,7 +11,8 @@
 }
 
 .main {
-  width: 120rem;
+  max-width: 120rem;
+  min-width: 120rem;
   height: 66rem;
   margin-top: 6rem;
   background-color: white;

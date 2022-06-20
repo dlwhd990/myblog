@@ -12,7 +12,8 @@
 }
 
 .login {
-  width: 100rem;
+  max-width: 100rem;
+  min-width: 100rem;
   height: 66rem;
   margin-top: 6rem;
   background-color: white;
@@ -32,7 +33,6 @@
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-
   position: absolute;
 }
 
@@ -78,17 +78,31 @@
   margin-bottom: 1.8rem;
 }
 
-.login_input {
+.input_box {
   width: 80%;
   height: 5rem;
   margin: 0.7rem 0;
-  outline: none;
-  border: none;
   background-color: rgba(0, 0, 0, 0.115);
   border-radius: 12px;
-  font-size: var(--font-size-bit-big);
   padding: 0 1.5rem;
   color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input_box input {
+  width: 94%;
+  outline: none;
+  border: none;
+  font-size: var(--font-size-bit-big);
+  background-color: transparent;
+  padding: 0 1rem;
+}
+
+.icon {
+  width: 6%;
+  font-size: var(--font-size-normal);
 }
 
 .submit_button {
