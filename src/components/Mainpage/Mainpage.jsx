@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Mainpage.module.css";
 
 const Mainpage = (props) => {
+  const nav = useNavigate();
+
+  const moveToSignup = () => {
+    nav("/signup");
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.top_banner}>
@@ -11,7 +18,9 @@ const Mainpage = (props) => {
             <h2 className={styles.sub_heading}>
               종로그는 무료로 제공되는 블로그 서비스입니다.
             </h2>
-            <button className={styles.start_now_button}>지금 시작하기</button>
+            <button className={styles.start_now_button} onClick={moveToSignup}>
+              지금 시작하기
+            </button>
           </div>
           <div>
             <div className={styles.blog_window}></div>
