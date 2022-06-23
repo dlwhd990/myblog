@@ -59,3 +59,14 @@
 .scrolled .login_button {
   background-color: var(--color-blue);
 }
+
+/* 특정 페이지에서는 배경색 추가 */
+.colored {
+  /* background-image: linear-gradient(
+    to right bottom,
+    var(--color-blue),
+    var(--color-pink)
+  ); */
+  background-color: var(--color-blue);
+  box-shadow: none;
+}

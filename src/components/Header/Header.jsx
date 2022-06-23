@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 const Header = (props) => {
   const nav = useNavigate();
   const [scroll, setScroll] = useState(0);
-
+  const [backgroundColor, setBackgroundColor] = useState(null);
   const moveToHome = () => {
     nav("/");
   };
@@ -15,8 +15,20 @@ const Header = (props) => {
     nav("/login");
   };
 
+  const moveToMyBlog = () => {
+    nav("/blog/me");
+  };
+
   const moveToLatestAndHot = () => {
     nav("/lnh");
+  };
+
+  const changeBackgroundColor = () => {
+    if (window.location.pathname.includes("/blog/")) {
+      setBackgroundColor(true);
+    } else {
+      setBackgroundColor(null);
+    }
   };
 
   const changeScrollValue = () => {
@@ -25,17 +37,24 @@ const Header = (props) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeScrollValue);
+
     return () => {
       window.removeEventListener("scroll", changeScrollValue);
     };
   });
 
+  useEffect(() => {
+    changeBackgroundColor();
+  }, [window.location.pathname]);
+
   return (
     <header
       className={
         scroll >= 70
-          ? `${styles.header} ${styles.scrolled}`
-          : `${styles.header}`
+          ? `${styles.header} ${styles.scrolled} ${
+              backgroundColor === true && styles.colored
+            }`
+          : `${styles.header} ${backgroundColor === true && styles.colored}`
       }
     >
       <div className={styles.logo_box} onClick={moveToHome}>
@@ -43,7 +62,7 @@ const Header = (props) => {
       </div>
       <nav>
         <ul className={styles.nav_list}>
-          <li>내 블로그</li>
+          <li onClick={moveToMyBlog}>내 블로그</li>
           <li onClick={moveToLatestAndHot}>인기글</li>
           <li>문의</li>
         </ul>
